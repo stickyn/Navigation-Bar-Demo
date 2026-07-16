@@ -1,0 +1,22 @@
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 55px;
+    text-align: center;
+    font-style: italic;
+}
+body {
+    /*This seems to be common place*/
+    margin: 0;
+}
+nav {
+    background-color: orange;
+    text-align: center;
+    text-decoration: none;
+    /*You would've done this anyways*/
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 50px;
+    
+    
+}
