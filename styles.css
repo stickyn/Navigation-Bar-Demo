@@ -3,11 +3,14 @@ body {
     margin: 0;
 }
 
-h1 {
+#upperHeader {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 55px;
+    font-size: 45px;
     text-align: center;
     font-style: italic;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
 }
 
 #navBar {
@@ -19,7 +22,8 @@ h1 {
     flex-direction: row;
     justify-content: center;
     column-gap: 50px;
-    visibility: ;
+    
+    
     
     
 }
