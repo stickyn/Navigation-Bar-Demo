@@ -2,15 +2,20 @@ body {
     /*This seems to be common place*/
     margin: 0;
 }
-
-#upperHeader {
+#titleText {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 45px;
     text-align: center;
     font-style: italic;
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
+}
+
+#upperHeader {
+    
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    
+   
+    
 }
 
 #navBar {
@@ -26,7 +31,9 @@ body {
     
     
     
+    
 }
+
 /* Found on two websites
 @media screen and (max-width: 670px){
     nav {
