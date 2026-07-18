@@ -14,8 +14,6 @@ body {
     flex-direction: row;
     column-gap: 15px;
     
-   
-    
 }
 
 #navBar {
@@ -33,10 +31,3 @@ body {
     
     
 }
-
-/* Found on two websites
-@media screen and (max-width: 670px){
-    nav {
-        visibility: hidden;
-    }
-} */
