@@ -1,10 +1,10 @@
-const match = window.matchMedia("(max-width: 650px)");
+const match = window.matchMedia("(max-width: 750px)");
 const horiztonalBar = document.getElementById("navBar");
-const verticalBarButton = document.createElement("nav");
+const verticalBarButton = document.createElement("div");
 const accessUpperHeader = document.getElementById("upperHeader");
 const retrieveTitleText = document.getElementById("titleText");
 const retrieveHeader = document.getElementById("HEADER");
-
+const createDetails = document.createElement("nav");
 const retrieveLink1 = document.createElement("h3");
 const retrieveLink2 = document.createElement("h3");
 const retrieveLink3 = document.createElement("h3");
@@ -50,11 +50,11 @@ function checkScale()
 {
     if(match.matches)
     {
-        horiztonalBar.style.visibility = "hidden";  
+        
         smallBar("create");      
     }
     else {
-        horiztonalBar.style.visibility = "visible";
+        
         smallBar("delete");
     }
 }
@@ -65,20 +65,19 @@ function smallBar(status)
 {
     if(status == "create")
     {
-
-        retrieveTitleText.remove()
-        verticalBarButton.style.backgroundColor = "black";
+        horiztonalBar.remove();
+        retrieveTitleText.remove();
         
-        verticalBarButton.style.height = "100%";
+     
+
+        verticalBarButton.style.backgroundColor = "black";
         verticalBarButton.style.textAlign = "center";
-        /**
-         * We need the vertical bar to match the width of the screen not the flexbox
-         */
+       verticalBarButton.style.width = "100%";
         retrieveTitleText.style.fontSize = "40px";
         retrieveTitleText.style.textAlign = "center";
-        accessUpperHeader.appendChild(verticalBarButton);
-        accessUpperHeader.appendChild(retrieveTitleText);
         
+    
+        accessUpperHeader.appendChild(verticalBarButton);
         verticalBarButton.appendChild(retrieveLink1);
         verticalBarButton.appendChild(retrieveLink2);
         verticalBarButton.appendChild(retrieveLink3);
@@ -95,11 +94,34 @@ function smallBar(status)
     else if(status == "delete")
     {
         verticalBarButton.remove();
-       
+        createDetails.remove();
+
         retrieveHeader.appendChild(retrieveTitleText);
+        retrieveHeader.appendChild(horiztonalBar);
         retrieveTitleText.style.fontSize = "95px";
         retrieveTitleText.style.textAlign = "center";
         
     }
    
 }
+    //     retrieveTitleText.remove();
+    //     horiztonalBar.remove();
+    //     accessUpperHeader.style.position = "sticky";
+    //     accessUpperHeader.style.top = 0;
+    //     accessUpperHeader.style.flexDirection = "column";
+    //     verticalBarButton.style.alignItems = "stretch";
+
+    //     verticalBarButton.style.backgroundColor = "black";
+    //     verticalBarButton.style.textAlign = "center";
+    //    verticalBarButton.style.width = "100%";
+    //     retrieveTitleText.style.fontSize = "40px";
+    //     retrieveTitleText.style.textAlign = "center";
+        
+    
+    //     accessUpperHeader.appendChild(verticalBarButton);
+    //     verticalBarButton.appendChild(retrieveLink1);
+    //     verticalBarButton.appendChild(retrieveLink2);
+    //     verticalBarButton.appendChild(retrieveLink3);
+    //     verticalBarButton.appendChild(retrieveLink4);
+    //     verticalBarButton.appendChild(retrieveLink5);
+    //     verticalBarButton.appendChild(retrieveLink6);
