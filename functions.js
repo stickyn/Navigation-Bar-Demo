@@ -5,19 +5,43 @@ const accessUpperHeader = document.getElementById("upperHeader");
 const retrieveTitleText = document.getElementById("titleText");
 const retrieveHeader = document.getElementById("HEADER");
 const createDetails = document.createElement("nav");
-const retrieveLink1 = document.createElement("h3");
-const retrieveLink2 = document.createElement("h3");
-const retrieveLink3 = document.createElement("h3");
-const retrieveLink4 = document.createElement("h3");
-const retrieveLink5 = document.createElement("h3");
-const retrieveLink6 = document.createElement("h3");
+const retrieveLink1 = document.createElement("a");
+const retrieveLink2 = document.createElement("a");
+const retrieveLink3 = document.createElement("a");
+const retrieveLink4 = document.createElement("a");
+const retrieveLink5 = document.createElement("a");
+const retrieveLink6 = document.createElement("a");
 
-retrieveLink1.textContent = "Halloween";
-retrieveLink2.textContent = "Haunted Houses";
-retrieveLink3.textContent = "Pumpkin Patches";
-retrieveLink4.textContent = "Halloween Stores";
-retrieveLink5.textContent = "Candy Vaults";
-retrieveLink6.textContent = "Vampire Archives";
+const r1 = document.createElement("h3");
+retrieveLink1.appendChild(r1);
+r1.textContent = "Halloween";
+const r2 = document.createElement("h3");
+retrieveLink2.appendChild(r2);
+
+const r3 = document.createElement("h3");
+retrieveLink3.appendChild(r3);
+
+const r4 = document.createElement("h3");
+retrieveLink4.appendChild(r4);
+
+const r5 = document.createElement("h3");
+retrieveLink5.appendChild(r5);
+
+const r6 = document.createElement("h3");
+retrieveLink6.appendChild(r6);
+
+r2.textContent = "Haunted Houses";
+r3.textContent = "Pumpkin Patches";
+r4.textContent = "Halloween Stores";
+r5.textContent = "Candy Vaults";
+r6.textContent = "Vampire Archives";
+
+retrieveLink1.setAttribute("href","www.google.com");
+retrieveLink2.setAttribute("href","www.google.com");
+retrieveLink3.setAttribute("href","www.google.com");
+retrieveLink4.setAttribute("href","www.google.com");
+retrieveLink5.setAttribute("href","www.google.com");
+retrieveLink6.setAttribute("href","www.google.com");
 
 /**
  * Through research, this seems to be a common thing:  
