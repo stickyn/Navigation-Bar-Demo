@@ -83,9 +83,13 @@ function smallBar(status)
        
         retrieveTitleText.style.fontSize = "40px";
         retrieveTitleText.style.textAlign = "center";
+        retrieveTitleText.style.position = "relative";
+        retrieveTitleText.style.top = "45px";
+        retrieveTitleText.style.right = "25px";
+        accessUpperHeader.style.backgroundColor = "orange";
         
-    
         accessUpperHeader.appendChild(verticalBarButton);
+        accessUpperHeader.appendChild(retrieveTitleText);
         verticalBarButton.appendChild(retrieveLink1);
         verticalBarButton.appendChild(retrieveLink2);
         verticalBarButton.appendChild(retrieveLink3);
@@ -103,7 +107,9 @@ function smallBar(status)
     {
         verticalBarButton.remove();
         createDetails.remove();
-
+        retrieveTitleText.style.position = "relative";
+        retrieveTitleText.style.top = "0px";
+        retrieveTitleText.style.right = "0px";
         retrieveHeader.appendChild(retrieveTitleText);
         retrieveHeader.appendChild(horiztonalBar);
         retrieveTitleText.style.fontSize = "95px";
