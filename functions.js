@@ -84,8 +84,8 @@ function smallBar(status)
         retrieveTitleText.style.fontSize = "40px";
         retrieveTitleText.style.textAlign = "center";
         retrieveTitleText.style.position = "relative";
-        retrieveTitleText.style.top = "35px";
-        retrieveTitleText.style.right = "25px";
+        retrieveTitleText.style.top = "45px";
+        retrieveTitleText.style.right = "15px";
         accessUpperHeader.style.backgroundColor = "orange";
         
         accessUpperHeader.appendChild(verticalBarButton);
