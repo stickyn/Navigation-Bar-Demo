@@ -1,10 +1,21 @@
+/**
+ * Variables being used
+ * @param match - What the minimum size of the window can be before the nav bar minimizes
+ * @param horiztonalBar - Access the navigation bar object
+ * @param verticalBarButton - This is what the navigation bar will 'turn' into
+ * @param accessUpperHeader - Access the object that contains that navigation bar
+ * @param retrieveTitleText - Access the h1 element of "Navigation Bar Demo 1.0"
+ * @param retrieveHeader - Access the header that contains the title text
+ * @param retrieveLink1:6 - Creates Links for use on the minimized nav bar
+ * @param r1:6 - Acts as h3 elements, so it doesn't look like a tiny a element
+ */
 const match = window.matchMedia("(max-width: 750px)");
 const horiztonalBar = document.getElementById("navBar");
 const verticalBarButton = document.createElement("div");
 const accessUpperHeader = document.getElementById("upperHeader");
 const retrieveTitleText = document.getElementById("titleText");
 const retrieveHeader = document.getElementById("HEADER");
-const createDetails = document.createElement("nav");
+
 const retrieveLink1 = document.createElement("a");
 const retrieveLink2 = document.createElement("a");
 const retrieveLink3 = document.createElement("a");
@@ -51,6 +62,11 @@ retrieveLink6.setAttribute("href","www.google.com");
  * https://johnkavanagh.co.uk/articles/responsive-javascript-and-the-matchmedia-method/
  */
 
+/**
+ * Checks if the screen is lower or equal to 750 px.
+ * @constructor
+ * @param match - What the minimum size of the window can be before the nav bar minimizes
+ */
 function checkScale()
 {
     if(match.matches)
@@ -66,16 +82,19 @@ function checkScale()
 checkScale();
 match.addEventListener("change",checkScale);
 
+/**
+ * This decides what to do when the screen is minimized
+ * @param {string} status - Can either be "create" or "delete"
+ * create - Deletes the original nav bar and text, and the new nav bar along with the link and title text
+ * are now appended to the upper header. AMong other CSS styling to fit all the text.
+ */
 function smallBar(status)
 {
     if(status == "create")
     {
-     
         horiztonalBar.remove();
         retrieveTitleText.remove();
         
-     
-
         verticalBarButton.style.backgroundColor = "orange";
         verticalBarButton.style.color = "black";
         verticalBarButton.style.textAlign = "center";
@@ -96,17 +115,15 @@ function smallBar(status)
         verticalBarButton.appendChild(retrieveLink4);
         verticalBarButton.appendChild(retrieveLink5);
         verticalBarButton.appendChild(retrieveLink6);
-
-        
-        
-        
-        
-        
     }
     else if(status == "delete")
     {
+        /**
+         * delete - The new nav bar is removed, CSS styling to the title text to make it fit the now larger screen
+         *  and the old nav bar is actually reattached to the header containing the text, as for some reason attaching it back the the upper header caused the links to 
+         * 'shift.'
+         */
         verticalBarButton.remove();
-        createDetails.remove();
         retrieveTitleText.style.position = "relative";
         retrieveTitleText.style.top = "0px";
         retrieveTitleText.style.right = "0px";
